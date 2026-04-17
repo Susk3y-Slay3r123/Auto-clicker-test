@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Overlay Autoclicker",
+  "version": "1.0",
+  "description": "An autoclicker that overlays on any webpage",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["autoclicker.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}
